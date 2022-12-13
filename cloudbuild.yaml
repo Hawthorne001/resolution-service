@@ -92,6 +92,7 @@ steps:
       - update
       - $_SERVICE_NAME-meta
       - "--platform=managed"
+      - "--vpc-egress private-ranges-only"
       - "--image=$_GCR_HOSTNAME/$PROJECT_ID/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA"
       # need to set via UI for new services
       #- "--allow-unauthenticated"
@@ -102,7 +103,6 @@ steps:
       - "--max-instances=80"
       - "--port=3000"
       - "--vpc-connector=$_VPC_SERVERLESS"
-      - "--vpc-egress private-ranges-only"
       - "--set-cloudsql-instances=$_RESOLUTION_SERVICE_POSTGRES_HOST"
       - "--update-secrets=DD_AGENT_HOST=DATADOG_AGENT_HOST:latest"
       - "--update-secrets=DATADOG_APM_ENABLE=DATADOG_APM_ENABLE:latest"
