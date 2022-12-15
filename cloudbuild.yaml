@@ -159,7 +159,7 @@ steps:
           --min-instances=1 \
           --max-instances=1 \
           --port=3000 \
-          --vpc-connector=$_VPC_SERVERLESS"\
+          --vpc-connector=$_VPC_SERVERLESS \
           --no-cpu-throttling \
           --set-cloudsql-instances=$_RESOLUTION_SERVICE_POSTGRES_HOST \
           --update-secrets=DD_AGENT_HOST=DATADOG_AGENT_HOST:latest \
