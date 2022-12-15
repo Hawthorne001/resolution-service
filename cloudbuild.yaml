@@ -100,6 +100,7 @@ steps:
       - "--min-instances=5"
       - "--max-instances=80"
       - "--port=3000"
+      - "--vpc-connector=$_VPC_SERVERLESS"
       - "--set-cloudsql-instances=$_RESOLUTION_SERVICE_POSTGRES_HOST"
       - "--update-secrets=DD_AGENT_HOST=DATADOG_AGENT_HOST:latest"
       - "--update-secrets=DATADOG_APM_ENABLE=DATADOG_APM_ENABLE:latest"
@@ -130,7 +131,6 @@ steps:
       - "--update-secrets=RATE_LIMITER_WINDOW_MS=RATE_LIMITER_WINDOW_MS:latest"
       - "--update-secrets=IN_MEMORY_CACHE_DISABLED=IN_MEMORY_CACHE_DISABLED:latest"
       - "--update-secrets=IN_MEMORY_CACHE_EXPIRATION_TIME=IN_MEMORY_CACHE_EXPIRATION_TIME:latest"
-
       - >-
         --labels=managed-by=gcp-cloud-build-deploy-cloud-run,commit-sha=$COMMIT_SHA,gcb-build-id=$BUILD_ID
       - "--region=$_DEPLOY_REGION"
