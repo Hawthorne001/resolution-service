@@ -40,6 +40,7 @@ steps:
       - "--min-instances=5"
       - "--max-instances=80"
       - "--port=3000"
+      - "--vpc-connector=$_VPC_SERVERLESS"
       - "--set-cloudsql-instances=$_RESOLUTION_SERVICE_POSTGRES_HOST"
       - "--update-secrets=DD_AGENT_HOST=DATADOG_AGENT_HOST:latest"
       - "--update-secrets=DATADOG_APM_ENABLE=DATADOG_APM_ENABLE:latest"
@@ -158,6 +159,7 @@ steps:
           --min-instances=1 \
           --max-instances=1 \
           --port=3000 \
+          --vpc-connector=$_VPC_SERVERLESS"\
           --no-cpu-throttling \
           --set-cloudsql-instances=$_RESOLUTION_SERVICE_POSTGRES_HOST \
           --update-secrets=DD_AGENT_HOST=DATADOG_AGENT_HOST:latest \
