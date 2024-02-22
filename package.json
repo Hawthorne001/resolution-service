@@ -73,7 +73,7 @@
     "moralis": "^1.5.5",
     "multer": "^1.4.2",
     "negotiator": "^0.6.2",
-    "newrelic": "latest",
+    "newrelic": "8.17.1",
     "node-cache": "^5.1.2",
     "node-fetch": "^2.6.1",
     "opensea-js": "1.2.8",
