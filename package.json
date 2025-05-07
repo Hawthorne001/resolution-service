@@ -47,7 +47,7 @@
     "script": "dotenv -e ./local.dev.env -- ts-node"
   },
   "dependencies": {
-    "@bugsnag/js": "^7.9.2",
+    "@bugsnag/js": "^7.22.3",
     "@bugsnag/plugin-express": "^7.9.2",
     "@google-cloud/storage": "^6.2.2",
     "@types/btoa": "^1.2.3",
